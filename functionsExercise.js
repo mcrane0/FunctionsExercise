@@ -3,7 +3,8 @@
 1. Create a declaration function called fozzieBear that displays the string "Wocka Wocka!" in the console/terminal 
     when the function is run/executed. Run/execute the function.
 2. Create another declaration function named beaker that has a parameter named speak. Using multiple console logs 
-    in the function, have whatever is passed as an argument display 4 times in the console/terminal. Finally, run/execute the function and pass "Meep" as the argument.
+    in the function, have whatever is passed as an argument display 4 times in the console/terminal. Finally, 
+    run/execute the function and pass "Meep" as the argument.
 3. Create a function called muppetShow that has two parameters named a and b. Inside the function create a 
     conditional statement (A.K.A. If statement) where if the string argument "Muppet" is passed in for "a" AND 
     the string argument "Show" is passed in for "b", then "It's time to play the music. It's time to light the 
@@ -31,8 +32,64 @@
     value to a new const variable called upperMovies.
 */
 
+function fozzieBear(){
+    console.log("Wocka Wocka!");
+}
 
+fozzieBear();
 
+function beaker(speak){
+    for (i = 0; i < 4; i++){
+        console.log(speak);
+    }
+}
+
+beaker("Meep");
+
+function muppetShow(a, b){
+    if (a === "Muppet" && b === "Show"){
+        console.log("It's time to play the music. It's time to light the lights.");
+    }
+}
+
+muppetShow("Muppet", "Show");
+
+function kermit(){
+    return "Kermit The Frog";
+}
+
+console.log(kermit());
+
+function muppetShowSeasons(seasons){
+    if (seasons == 5){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(muppetShowSeasons(5));
+console.log(muppetShowSeasons(4));
+
+const manOrMuppet = function (){
+    console.log("Am I a man or am I a Muppet?");
+}
+
+manOrMuppet();
+
+rainbowConnection = () => "Someday we'll find it. The Rainbow Connection. The lovers, the dreamers and me";
+console.log(rainbowConnection());
+
+/*
+8: No
+9: Yes
+*/
+
+const newMuppetMovies = ["The Muppets", "Muppets Most Wanted"];
+
+const upperMovies = newMuppetMovies.map(m => m.toUpperCase());
+console.log(upperMovies);
 
 
 // bonus
