@@ -92,7 +92,7 @@ const upperMovies = newMuppetMovies.map(m => m.toUpperCase());
 console.log(upperMovies);
 
 
-// bonus
+// BONUS
 /*
 11a. Create a const variable called oldMuppetMovies and set the value to an array with the following values: 
     "The Muppet Movie", "The Muppets Take Manhattan", "The Great Muppet Caper", "The Muppet Christmas Carol", 
@@ -117,3 +117,37 @@ console.log(upperMovies);
     "HeLlO wOrLd" instead of "HeLlO WoRlD").
 */
 
+const oldMuppetMovies = ["The Muppet Movie", "The Muppets Take Manhattan", "The Great Muppet Caper", "The Muppet Christmas Carol", "Muppet Treasure Island", "Muppets From Space"];
+
+const twoMovies = oldMuppetMovies.filter(m => (m.length == 22));
+console.log(twoMovies);
+
+const charactersOne = ["Statler", "Waldorf"];
+const charactersTwo = ["The Swedish Chef", "Animal", "Rowlf"];
+
+randomMuppet = (characters) => {
+    let randNum = Math.floor(Math.random() * (characters.length));
+    console.log(characters[randNum]);
+}
+
+randomMuppet(charactersOne);
+randomMuppet(charactersTwo);
+
+caps = (string) => {
+    string = string.toLowerCase();
+    let newString = "";
+    for (i = 0; i < string.length; i++){
+        if (string[i] == " "){
+            newString += " ";
+        }
+        else if (i % 2 == 0){
+            newString += string[i].toUpperCase();
+        }
+        else {
+            newString += string[i];
+        }
+    }
+    return newString;
+}
+
+console.log(caps("Hello World"));
